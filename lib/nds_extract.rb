@@ -71,7 +71,7 @@ def gross_per_studio(collection)
 end
 
 
-
+      # 
 
 def movies_with_directors_set(source)
   
@@ -88,9 +88,10 @@ def movies_with_directors_set(source)
 end
 
 
+
 # ----------------    End of Your Code Region --------------------
-# Don't edit the following code! Make the methods above work with this method
-# call code. You'll have to "see-saw" to get this to work!
+# Don't edit the following code! Make the methods above work with these 
+# You'll have to "see-saw" to get this to work!
 
 def studios_totals(nds)
   a_o_a_movies_with_director_names = movies_with_directors_set(nds)
