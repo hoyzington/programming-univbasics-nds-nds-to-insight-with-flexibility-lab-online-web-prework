@@ -18,19 +18,6 @@ def flatten_a_o_a(aoa)
 end
 
 
-      # A new hash that includes :director_name as a key
-
-def movies_with_director_names(director_name, movie_data)
-  { 
-    :title => movie_data[:title],
-    :worldwide_gross => movie_data[:worldwide_gross],
-    :release_year => movie_data[:release_year],
-    :studio => movie_data[:studio],
-    :director_name => director_name
-  }
-end
-
-
       # 
 
 def movies_with_director_key(name, movies_collection)
