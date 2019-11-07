@@ -1,9 +1,7 @@
-      # Provided, don't edit
 require 'directors_database'
 
 
-      # A method we're giving you. This "flattens"  Arrays of Arrays so: [[1,2],
-      # [3,4,5], [6]] => [1,2,3,4,5,6].
+      # "Flattens" Arrays of Arrays so: [[1,2], [3,4,5],] => [1,2,3,4,5]
 
 def flatten_a_o_a(aoa)
   result = []
@@ -20,7 +18,7 @@ def flatten_a_o_a(aoa)
 end
 
 
-      # A hash
+      # A new hash that includes :director_name as a key
 
 def movie_with_director_name(director_name, movie_data)
   { 
