@@ -52,21 +52,6 @@ end
 
       # 
 
-def gross_per_studio(collection)
-  
-  # GOAL:   Given an AoH where each Hash is a movie, return a Hash that includes
-  #         includes the total worldwide_gross of all the movies from each studio.
-  #
-  # INPUT:  (collection) AoH where each Hash represents a movie
-  #
-  # RETURN: Hash where the keys are the studios and whe values are the sum of
-  #         all the worldwide_gross numbers for every movie in the input Hash
-  
-end
-
-
-      # 
-
 def movies_with_directors_set(source)
   
   # GOAL:   For each director, find their :movies Array and put it in a new Array
