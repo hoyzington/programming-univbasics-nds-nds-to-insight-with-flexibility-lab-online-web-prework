@@ -57,7 +57,7 @@ end
 
       # A new hash that includes :director_name as a key
 
-def movies_with_director_names(director_name, movie_data)
+def movie_with_director_name(director_name, movie_data)
   { 
     :title => movie_data[:title],
     :worldwide_gross => movie_data[:worldwide_gross],
@@ -66,6 +66,10 @@ def movies_with_director_names(director_name, movie_data)
     :director_name => director_name
   }
 end
+
+
+
+
 
 
       # 
@@ -77,7 +81,7 @@ def gross_per_studio(collection)
   #
   # INPUT:  (collection) AoH where each Hash represents a movie
   #
-  # RETURN: Hash where the keys are the studios and whe values are the sum of
+  # RETURN: Hash where the keys are the studios and the values are the sum of
   #         all the worldwide_gross numbers for every movie in the input Hash
   
 end
