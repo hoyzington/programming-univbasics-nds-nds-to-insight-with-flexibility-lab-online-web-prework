@@ -3,12 +3,12 @@ require 'directors_database'
 
       # A hash that includes :director_name as a key (INDIVIDUAL DIRECTOR)
 
-def movie_with_director_name(director_name, movie_data)
+def movie_with_director_name(director_name, movies_coll)
   result = {}
   i = 0
   while i < x.size do
     new_movie = { 
-      :title => movie_data[:title],
+      :title => movies_coll[:title],
       :worldwide_gross => movie_data[:worldwide_gross],
       :release_year => movie_data[:release_year],
       :studio => movie_data[:studio],
