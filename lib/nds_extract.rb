@@ -1,7 +1,7 @@
 require 'directors_database'
 
 
-      # A hash that includes :director_name as a key (INDIVIDUAL DIRECTOR)
+      # Convert one movie hash to one with :director_name as a key
 
 def movie_with_director_name(director_name, movies_coll)
   result = { 
@@ -15,7 +15,7 @@ def movie_with_director_name(director_name, movies_coll)
 end
 
 
-      # An AoH
+      # An AoH with all of A director's movies
 
 def movies_with_director_key(name, movies_collection)
   result = []
@@ -41,9 +41,9 @@ def movies_with_director_key(name, movies_collection)
 end
 
 
-      # An AoA
+      # An AoA that includes ALL DIRECTORS
 
-def movies_with_directors_set(source)
+def movies_with_directors_set(nds)
   result = []
   i = 0
   while i < x.size do
