@@ -20,8 +20,8 @@ end
 def movies_with_director_key(director, movie_collection)
   result = []
   i = 0
-  movie = movie_collection[i]
   while i < movie_collection.size do
+    
     result[i] = movie_with_director_name(director, movie)
     i += 1
   end
