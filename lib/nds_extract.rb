@@ -6,7 +6,7 @@ require 'directors_database'
 def movie_with_director_name(director_name, movies_coll)
   result = { 
     :title => movies_coll[:title],
-    :worldwide_gross => movies_coll[:worldwide_gross],
+    :worldwide_gross => movies_coll[:worldwide_gross],    # DON'T CHANGE!
     :release_year => movies_coll[:release_year],
     :studio => movies_coll[:studio],
     :director_name => director_name
