@@ -34,7 +34,7 @@ end
       # 
 
 def movies_with_directors_set(source)
-  
+  result = []
   i = 0
   while i < x do
     
@@ -48,6 +48,7 @@ def movies_with_directors_set(source)
   # RETURN: AoA containing all of a director's movies. Each movie will need
   #         to have a :director_name key added to it.
   
+  result
 end
 
 
@@ -96,7 +97,7 @@ def movies_with_director_names(director_name, movie_data)
     
     i += 1
   end
-  
+  result
 end
 
 
