@@ -20,6 +20,10 @@ def movies_with_director_key(name, movies_collection)
 end
 
 
+
+
+
+
       # 
 
 def movies_with_directors_set(source)
@@ -31,6 +35,23 @@ def movies_with_directors_set(source)
   # RETURN: AoA containing all of a director's movies. Each movie will need
   #         to have a :director_name key added to it.
   
+end
+
+
+      # "Flattens" Arrays of Arrays so: [[1,2], [3,4,5],] => [1,2,3,4,5]
+
+def flatten_a_o_a(aoa)
+  result = []
+  i = 0
+  while i < aoa.length do
+    k = 0
+    while k < aoa[i].length do
+      result << aoa[i][k]
+      k += 1
+    end
+    i += 1
+  end
+  result
 end
 
 
