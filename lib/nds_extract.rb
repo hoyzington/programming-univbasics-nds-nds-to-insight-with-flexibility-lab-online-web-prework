@@ -46,7 +46,7 @@ end
 def movies_with_directors_set(nds)
   result = []
   i = 0
-  director = nds
+  director = nds[0][:name]
   while i < nds.size do
     result[i] = movies_with_director_key(director, movie_collection)
     i += 1
