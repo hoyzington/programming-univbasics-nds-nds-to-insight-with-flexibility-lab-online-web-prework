@@ -91,13 +91,11 @@ end
 
 def movies_with_director_names(director_name, movie_data)
   
-  new_movie = { 
-    :title => movie_data[:title],
-    :worldwide_gross => movie_data[:worldwide_gross],
-    :release_year => movie_data[:release_year],
-    :studio => movie_data[:studio],
-    :director_name => director_name
-  }
+  i = 0
+  while i < x do
+    
+    i += 1
+  end
   
 end
 
@@ -105,6 +103,8 @@ end
       # 
 
 def gross_per_studio(collection)
+  
+  
   
   # GOAL:   Given an AoH where each Hash is a movie, return a Hash that includes
   #         includes the total worldwide_gross of all the movies from each studio.
