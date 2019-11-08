@@ -68,7 +68,7 @@ def movie_with_director_name(director_name, movie_data)
 end
 
 
-      # 
+      # A hash that includes :director_name as a key (ALL DIRECTORS)
 
 def movies_with_director_names(director_name, movie_data)
   
