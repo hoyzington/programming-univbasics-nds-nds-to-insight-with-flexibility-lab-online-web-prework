@@ -74,11 +74,15 @@ def movie_with_director_name(director_name, movie_data)
   new_movie = {}
   i = 0
   while i < x do
-    
+    new_movie = { 
+      :title => movie_data[:title],
+      :worldwide_gross => movie_data[:worldwide_gross],
+      :release_year => movie_data[:release_year],
+      :studio => movie_data[:studio],
+      :director_name => director_name
+    }
     i += 1
   end
-  
-  
   new_movie
 end
 
