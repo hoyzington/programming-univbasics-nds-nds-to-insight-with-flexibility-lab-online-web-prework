@@ -55,7 +55,7 @@ def flatten_a_o_a(aoa)
 end
 
 
-      # A new hash that includes :director_name as a key
+      # A hash that includes :director_name as a key (individual director)
 
 def movie_with_director_name(director_name, movie_data)
   { 
@@ -68,7 +68,7 @@ def movie_with_director_name(director_name, movie_data)
 end
 
 
-
+      # 
 
 def movies_with_director_names(director_name, movie_data)
   
