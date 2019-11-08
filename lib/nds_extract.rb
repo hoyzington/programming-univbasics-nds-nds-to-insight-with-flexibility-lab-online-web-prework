@@ -67,6 +67,23 @@ def movies_with_directors_set(source)
 end
 
 
+      # "Flattens" Arrays of Arrays so: [[1,2], [3,4,5],] => [1,2,3,4,5]
+
+def flatten_a_o_a(aoa)
+  result = []
+  i = 0
+  while i < aoa.length do
+    k = 0
+    while k < aoa[i].length do        # DON'T CHANGE!
+      result << aoa[i][k]
+      k += 1
+    end
+    i += 1
+  end
+  result
+end
+
+
       # A hash that includes :director_name as a key (ALL DIRECTORS)
 
 def movies_with_director_names(director_name, movie_data)
