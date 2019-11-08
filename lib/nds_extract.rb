@@ -88,7 +88,9 @@ def gross_per_studio(collection)
   result = {}
   i = 0
   while i < collection.size do
-    result[i] = collection[i][:studio]
+    studio = collection[i][:studio]
+    total_earnings = 
+    
     i += 1
   end
   
