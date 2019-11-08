@@ -91,7 +91,13 @@ end
 
 def movies_with_director_names(director_name, movie_data)
   
-  
+  new_movie = { 
+    :title => movie_data[:title],
+    :worldwide_gross => movie_data[:worldwide_gross],
+    :release_year => movie_data[:release_year],
+    :studio => movie_data[:studio],
+    :director_name => director_name
+  }
   
 end
 
