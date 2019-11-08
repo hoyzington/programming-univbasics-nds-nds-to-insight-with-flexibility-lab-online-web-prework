@@ -71,7 +71,7 @@ end
       # A hash that includes :director_name as a key (INDIVIDUAL DIRECTOR)
 
 def movie_with_director_name(director_name, movie_data)
-  new_movie = {}
+  result = {}
   i = 0
   while i < x do
     new_movie = { 
@@ -83,7 +83,7 @@ def movie_with_director_name(director_name, movie_data)
     }
     i += 1
   end
-  new_movie
+  result
 end
 
 
