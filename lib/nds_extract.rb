@@ -4,33 +4,28 @@ require 'directors_database'
       # A hash that includes :director_name as a key (INDIVIDUAL DIRECTOR)
 
 def movie_with_director_name(director_name, movies_coll)
-  result = {}
-  i = 0
-  while i < x.size do
-    new_movie = { 
-      :title => movies_coll[:title],
-      :worldwide_gross => movies_coll[:worldwide_gross],
-      :release_year => movies_coll[:release_year],
-      :studio => movie_data[:studio],
-      :director_name => director_name
+  result = { 
+    :title => movies_coll[:title],
+    :worldwide_gross => movies_coll[:worldwide_gross],
+    :release_year => movies_coll[:release_year],
+    :studio => movies_coll[:studio],
+    :director_name => director_name
     }
-    i += 1
-  end
   result
 end
 
 
-      # An array
+      # An AoH
 
 def movies_with_director_key(name, movies_collection)
   result = []
   i = 0
   while i < x.size do
-    movie_with_director_name(director_name, movie_data)
+    movie_with_director_name(director_name, movies_coll)
     i += 1
   end
   
-    # GOAL:   For each Hash in an Array (movies_collection), provide a collection
+  # GOAL:   For each Hash in an Array (movies_collection), provide a collection
   #         of movies and a directors name to the movie_with_director_name method
   #         and accumulate the returned Array of movies into a new Array that's
   #         returned by this method.
