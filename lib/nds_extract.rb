@@ -90,7 +90,11 @@ def gross_per_studio(collection)
   while i < collection.size do
     studio = collection[i][:studio]
     total_earnings = collection[i][:worldwide_gross]
-    if !result[s]
+    if !result[snack_price]
+      result[snack_price] = 1
+    else
+      result[snack_price] += 1
+    end
     
     i += 1
   end
