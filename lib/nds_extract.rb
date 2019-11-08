@@ -6,7 +6,7 @@ require 'directors_database'
 def movies_with_director_key(name, movies_collection)
   result = []
   i = 0
-  while i < x do
+  while i < x.size do
     
     i += 1
   end
@@ -27,16 +27,12 @@ def movies_with_director_key(name, movies_collection)
 end
 
 
-#--------------------------------------------------------------------------
-
-
-
       # 
 
 def movies_with_directors_set(source)
   result = []
   i = 0
-  while i < x do
+  while i < x.size do
     
     i += 1
   end
@@ -59,7 +55,7 @@ def flatten_a_o_a(aoa)
   i = 0
   while i < aoa.length do
     k = 0
-    while k < aoa[i].length do
+    while k < aoa[i].length do      # DON'T CHANGE!
       result << aoa[i][k]
       k += 1
     end
@@ -101,10 +97,10 @@ def movies_with_director_names(director_name, movie_data)
 end
 
 
-      # 
+      # A hash of each studio's earnings for all movies
 
 def gross_per_studio(collection)
-  
+  result = {}
   i = 0
   while i < x do
     
@@ -112,13 +108,14 @@ def gross_per_studio(collection)
   end
   
   # GOAL:   Given an AoH where each Hash is a movie, return a Hash that includes
-  #         includes the total worldwide_gross of all the movies from each studio.
+  #         the total worldwide_gross of all the movies from each studio.
   #
   # INPUT:  (collection) AoH where each Hash represents a movie
   #
   # RETURN: Hash where the keys are the studios and the values are the sum of
   #         all the worldwide_gross numbers for every movie in the input Hash
   
+  result
 end
 
 
@@ -126,6 +123,7 @@ end
 #         ----------------    MAIN METHOD    --------------------
 # Don't edit this code! See-saw to make the previous methods work with these 
 # You'll have to "see-saw" to get this to work!
+
 
 def studios_totals(nds)
   a_o_a_movies_with_director_names = movies_with_directors_set(nds)
