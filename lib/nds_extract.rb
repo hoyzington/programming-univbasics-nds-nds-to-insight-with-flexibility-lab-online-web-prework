@@ -6,7 +6,7 @@ require 'directors_database'
 def movie_with_director_name(director_name, movie_data)
   result = {}
   i = 0
-  while i < x do
+  while i < x.size do
     new_movie = { 
       :title => movie_data[:title],
       :worldwide_gross => movie_data[:worldwide_gross],
@@ -20,7 +20,7 @@ def movie_with_director_name(director_name, movie_data)
 end
 
 
-      # 
+      # An array
 
 def movies_with_director_key(name, movies_collection)
   result = []
@@ -46,7 +46,7 @@ def movies_with_director_key(name, movies_collection)
 end
 
 
-      # 
+      # An AoA
 
 def movies_with_directors_set(source)
   result = []
@@ -67,16 +67,30 @@ def movies_with_directors_set(source)
 end
 
 
-
-
-
       # A hash that includes :director_name as a key (ALL DIRECTORS)
 
 def movies_with_director_names(director_name, movie_data)
   result = {}
   i = 0
-  while i < x do
+  while i < x.size do
     
+    i += 1
+  end
+  result
+end
+
+
+      # "Flattens" Arrays of Arrays so: [[1,2], [3,4,5],] => [1,2,3,4,5]
+
+def flatten_a_o_a(aoa)
+  result = []
+  i = 0
+  while i < aoa.length do
+    k = 0
+    while k < aoa[i].length do        # DON'T CHANGE!
+      result << aoa[i][k]
+      k += 1
+    end
     i += 1
   end
   result
@@ -88,7 +102,7 @@ end
 def gross_per_studio(collection)
   result = {}
   i = 0
-  while i < x do
+  while i < x.size do
     
     i += 1
   end
