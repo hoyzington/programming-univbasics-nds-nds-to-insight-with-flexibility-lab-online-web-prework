@@ -20,7 +20,8 @@ end
 def movies_with_director_key(director, movie_collection)
   result = []
   i = 0
-  while i < x.size do
+  movie = movie_collection[i]
+  while i < movie_collection.size do
     result[i] = movie_with_director_name(director, movie)
     i += 1
   end
@@ -86,8 +87,8 @@ end
 def gross_per_studio(collection)
   result = {}
   i = 0
-  while i < x.size do
-    result[] =
+  while i < collection.size do
+    result[i] = collection[i]
     i += 1
   end
   
