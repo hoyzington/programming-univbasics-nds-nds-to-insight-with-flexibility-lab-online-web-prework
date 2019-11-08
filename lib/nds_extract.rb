@@ -10,7 +10,7 @@ def movie_with_director_name(director_name, movies_coll)
     new_movie = { 
       :title => movies_coll[:title],
       :worldwide_gross => movies_coll[:worldwide_gross],
-      :release_year => movie_data[:release_year],
+      :release_year => movies_coll[:release_year],
       :studio => movie_data[:studio],
       :director_name => director_name
     }
