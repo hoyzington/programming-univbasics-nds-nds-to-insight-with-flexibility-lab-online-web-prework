@@ -1,86 +1,120 @@
-# Provided, don't edit
 require 'directors_database'
 
-# A method we're giving you. This "flattens"  Arrays of Arrays so: [[1,2],
-# [3,4,5], [6]] => [1,2,3,4,5,6].
+
+      # Convert ONE movie hash to one with :director_name as a key
+
+def movie_with_director_name(director, movie)
+  result = { 
+    :title => movie[:title],
+    :worldwide_gross => movie[:worldwide_gross],    # DON'T CHANGE!
+    :release_year => movie[:release_year],
+    :studio => movie[:studio],
+    :director_name => director
+    }
+  result
+end
+
+
+      # An AoH with all of ONE director's movies
+
+def movies_with_director_key(director, movie_collection)
+  result = []
+  i = 0
+  while i < movie_collection.size do
+    movie = movie_collection[i]
+    result[i] = movie_with_director_name(director, movie)
+    i += 1
+  end
+  
+  # GOAL:   For each Hash in an Array (movies_collection), provide a collection
+  #         of movies and a directors name to the movie_with_director_name method
+  #         and accumulate the returned Array of movies into a new Array that's
+  #         returned by this method.
+  #
+  # INPUT:  (name), a director's name, and (movies_collection), an AoH where
+  #         each Hash represents a movie
+  #
+  # RETURN: AoH where each Hash represents a movie; however, they should all have
+  #         a :director_name key. This addition can be done by using the provided
+  #         movie_with_director_name method
+  
+  result
+end
+
+
+      # An AoA that includes ALL DIRECTORS
+
+def movies_with_directors_set(nds)
+  result = []
+  i = 0
+  while i < nds.size do
+    director = nds[i][:name]
+    movie_collection = nds[i][:movies]
+    result[i] = movies_with_director_key(director, movie_collection)
+    i += 1
+  end
+  
+  # GOAL:   For each director, find their :movies Array and put it in a new Array
+  #
+  # INPUT:  (source) An AoH containing director info incl. :name and :movies
+  #
+  # RETURN: AoA containing all of a director's movies. Each movie will need
+  #         to have a :director_name key added to it.
+  
+  result
+end
+
+
+      # "Flattens" Arrays of Arrays so: [[1,2], [3,4,5],] => [1,2,3,4,5]
 
 def flatten_a_o_a(aoa)
   result = []
   i = 0
-
   while i < aoa.length do
     k = 0
-    while k < aoa[i].length do
+    while k < aoa[i].length do        # DON'T CHANGE!
       result << aoa[i][k]
       k += 1
     end
     i += 1
   end
-
   result
 end
 
-def movie_with_director_name(director_name, movie_data)
-  { 
-    :title => movie_data[:title],
-    :worldwide_gross => movie_data[:worldwide_gross],
-    :release_year => movie_data[:release_year],
-    :studio => movie_data[:studio],
-    :director_name => director_name
-  }
-end
 
-
-# Your code after this point
-
-def movies_with_director_key(name, movies_collection)
-  # GOAL: For each Hash in an Array (movies_collection), provide a collection
-  # of movies and a directors name to the movie_with_director_name method
-  # and accumulate the returned Array of movies into a new Array that's
-  # returned by this method.
-  #
-  # INPUT:
-  # * name: A director's name
-  # * movies_collection: An Array of Hashes where each Hash represents a movie
-  #
-  # RETURN:
-  #
-  # Array of Hashes where each Hash represents a movie; however, they should all have a
-  # :director_name key. This addition can be done by using the provided
-  # movie_with_director_name method
-end
-
+      # A hash of each studio's earnings for all movies
 
 def gross_per_studio(collection)
-  # GOAL: Given an Array of Hashes where each Hash represents a movie,
-  # return a Hash that includes the total worldwide_gross of all the movies from
-  # each studio.
+  result = {}
+  i = 0
+  while i < collection.size do
+    studio = collection[i][:studio]
+    total_earnings = collection[i][:worldwide_gross]
+    if !result[studio]
+      result[studio] = total_earnings
+    else
+      result[studio] += total_earnings
+    end
+    i += 1
+  end
+  
+  # GOAL:   Given an AoH where each Hash is a movie, return a Hash that includes
+  #         the total worldwide_gross of all the movies from each studio.
   #
-  # INPUT:
-  # * collection: Array of Hashes where each Hash where each Hash represents a movie
+  # INPUT:  (collection) AoH where each Hash represents a movie
   #
-  # RETURN:
-  #
-  # Hash whose keys are the studio names and whose values are the sum
-  # total of all the worldwide_gross numbers for every movie in the input Hash
+  # RETURN: Hash where the keys are the studios and the values are the sum of
+  #         all the worldwide_gross numbers for every movie in the input Hash
+  
+  result
 end
 
-def movies_with_directors_set(source)
-  # GOAL: For each director, find their :movies Array and stick it in a new Array
-  #
-  # INPUT:
-  # * source: An Array of Hashes containing director information including
-  # :name and :movies
-  #
-  # RETURN:
-  #
-  # Array of Arrays containing all of a director's movies. Each movie will need
-  # to have a :director_name key added to it.
-end
 
-# ----------------    End of Your Code Region --------------------
-# Don't edit the following code! Make the methods above work with this method
-# call code. You'll have to "see-saw" to get this to work!
+
+#         ----------------    MAIN METHOD    --------------------
+# Don't edit this code! See-saw to make the previous methods work with these 
+# You'll have to "see-saw" to get this to work!
+
 
 def studios_totals(nds)
   a_o_a_movies_with_director_names = movies_with_directors_set(nds)
