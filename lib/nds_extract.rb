@@ -9,7 +9,7 @@ def movie_with_director_name(director_name, movies_coll)
   while i < x.size do
     new_movie = { 
       :title => movies_coll[:title],
-      :worldwide_gross => movie_data[:worldwide_gross],
+      :worldwide_gross => movies_coll[:worldwide_gross],
       :release_year => movie_data[:release_year],
       :studio => movie_data[:studio],
       :director_name => director_name
