@@ -79,19 +79,6 @@ def flatten_a_o_a(aoa)
 end
 
 
-      # A hash that includes :director_name as a key (ALL DIRECTORS)
-
-def movies_with_director_names(director_name, movie_data)
-  result = {}
-  i = 0
-  while i < x.size do
-    
-    i += 1
-  end
-  result
-end
-
-
       # A hash of each studio's earnings for all movies
 
 def gross_per_studio(collection)
