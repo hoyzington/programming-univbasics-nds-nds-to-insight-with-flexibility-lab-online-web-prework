@@ -4,7 +4,7 @@ require 'directors_database'
       # 
 
 def movies_with_director_key(name, movies_collection)
-  updated_movies = []
+  result = []
   i = 0
   while i < x do
     
@@ -23,7 +23,7 @@ def movies_with_director_key(name, movies_collection)
   #         a :director_name key. This addition can be done by using the provided
   #         movie_with_director_name method
   
-  updated_movies
+  result
 end
 
 
@@ -90,7 +90,7 @@ end
       # A hash that includes :director_name as a key (ALL DIRECTORS)
 
 def movies_with_director_names(director_name, movie_data)
-  
+  result = {}
   i = 0
   while i < x do
     
