@@ -104,7 +104,11 @@ end
 
 def gross_per_studio(collection)
   
-  
+  i = 0
+  while i < x do
+    
+    i += 1
+  end
   
   # GOAL:   Given an AoH where each Hash is a movie, return a Hash that includes
   #         includes the total worldwide_gross of all the movies from each studio.
