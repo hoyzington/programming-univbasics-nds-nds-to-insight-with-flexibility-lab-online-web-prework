@@ -1,27 +1,27 @@
 require 'directors_database'
 
 
-      # Convert one movie hash to one with :director_name as a key
+      # Convert ONE movie hash to one with :director_name as a key
 
-def movie_with_director_name(dir_name, movies_coll)
+def movie_with_director_name(director, movie)
   result = { 
-    :title => movies_coll[:title],
-    :worldwide_gross => movies_coll[:worldwide_gross],    # DON'T CHANGE!
-    :release_year => movies_coll[:release_year],
-    :studio => movies_coll[:studio],
-    :director_name => dir_name
+    :title => movie[:title],
+    :worldwide_gross => movie[:worldwide_gross],    # DON'T CHANGE!
+    :release_year => movie[:release_year],
+    :studio => movie[:studio],
+    :director_name => director
     }
   result
 end
 
 
-      # An AoH with all of A director's movies
+      # An AoH with all of ONE director's movies
 
-def movies_with_director_key(name, movies_collection)
+def movies_with_director_key(director, movie_collection)
   result = []
   i = 0
   while i < x.size do
-    movie_with_director_name(director_name, movies_coll)
+    result[i] = movie_with_director_name(director, movie)
     i += 1
   end
   
