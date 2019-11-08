@@ -47,7 +47,7 @@ def movies_with_directors_set(nds)
   result = []
   i = 0
   while i < x.size do
-    
+    result[i] = 
     i += 1
   end
   
